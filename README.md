@@ -22,18 +22,26 @@ A lightweight command-line library management system built with Bash scripting. 
 
 ```
 .
-├── Library_Management.sh    # Main script
-├── books.txt               # Book inventory database
-├── borrowed_books.txt      # Borrowed books records
-├── login.txt              # Admin credentials (encrypted storage recommended)
-└── README.md              # Project documentation
+├── Library_Management.sh       # Main script
+├── books.txt                   # Book inventory database
+├── borrowed_books.txt          # Borrowed books records
+├── login.txt                   # Admin credentials (encrypted storage recommended)
+├── flowchart_diagram.png       # Visual project flowchart
+├── LibraryManagement_Report.pdf # Detailed project documentation
+└── README.md                   # Project documentation
 ```
 
-### Overall project full flowchart Diagram:
+## Documentation
 
-![flowchart](flowchart_diagram.png)
+### Project Flowchart
 
-#### Also i have added the project report in the repository named "LibraryManagement_Report.pdf". You can read it to get more knowledge about the project.
+Visual representation of the complete system workflow:
+
+![Library Management System Flowchart](flowchart_diagram.png)
+
+### Detailed Report
+
+For comprehensive project documentation, implementation details, and technical specifications, refer to the [Project Report](LibraryManagement_Report.pdf).
 
 ## Installation
 
