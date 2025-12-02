@@ -29,6 +29,12 @@ A lightweight command-line library management system built with Bash scripting. 
 └── README.md              # Project documentation
 ```
 
+### Overall project full flowchart Diagram:
+
+![flowchart](flowchart_diagram.png)
+
+#### Also i have added the project report in the repository named "LibraryManagement_Report.pdf". You can read it to get more knowledge about the project.
+
 ## Installation
 
 1. Clone the repository:
