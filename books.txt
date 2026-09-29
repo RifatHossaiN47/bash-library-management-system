@@ -4,4 +4,5 @@ Programming C by Balagurusamy, Available
 OldManSea by Hemingway, Available
 Fahrenheit451 by Bradbury, Available
 BraveNewWorld by Huxley, Available
-LordFlies by Golding, AvailableDune by Herbert, Available
+LordFlies by Golding, Available
+Dune by Herbert, Available

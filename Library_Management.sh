@@ -89,7 +89,7 @@ edit_book() {
     if grep -q "$original_name" $BOOKS_FILE; then 
         read -p "Enter the new book name: " new_name
         read -p "Enter the new author name: " new_author
-        sed -i "s/^$original_name, .*/$new_name by $new_author, Available/" $BOOKS_FILE 
+        sed -i "s/^$original_name.*, .*/$new_name by $new_author, Available/" $BOOKS_FILE 
         echo "Book updated."
     else
         echo "Book not found."
@@ -133,8 +133,8 @@ user_menu() {
 
 borrow_book() {
     read -p "Enter the exact book name to borrow: " book_name
-    if grep -q "$book_name, Available" $BOOKS_FILE; then
-        sed -i "s/^$book_name, Available/$book_name, Borrowed/" $BOOKS_FILE
+    if grep -q "^$book_name.*Available" $BOOKS_FILE; then
+        sed -i "s/^\($book_name.*, \)Available/\1Borrowed/" $BOOKS_FILE
         echo "$book_name, $(date +%Y-%m-%d)" >> $BORROW_FILE
         echo "You have borrowed the book."
     else
@@ -145,9 +145,9 @@ borrow_book() {
 
 return_book() {
     read -p "Enter the exact book name to return: " book_name
-    if grep -q "$book_name, Borrowed" $BOOKS_FILE; then
-        sed -i "s/^$book_name, Borrowed/$book_name, Available/" $BOOKS_FILE
-        sed -i "/^$book_name,/d" $BORROW_FILE
+    if grep -q "^$book_name.*Borrowed" $BOOKS_FILE; then
+        sed -i "s/^\($book_name.*, \)Borrowed/\1Available/" $BOOKS_FILE
+        sed -i "/^$book_name/d" $BORROW_FILE
         echo "You have returned the book."
     else
         echo "This book was not borrowed or does not exist."
